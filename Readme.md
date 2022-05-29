@@ -25,3 +25,11 @@ npm i morgan --save-dev
 <!-- 5. Install Template engines (Handlebars) -->
 
 npm install express-handlebars
+
+<!-- 6. Config Static file -->
+
+app.use(express.static(path.join(\_\_dirname, 'public')))
+
+<!-- 7. Install node-SASS -->
+
+npm i node-sass --save-dev

@@ -14,7 +14,12 @@ app.engine("hbs", engine.engine({extname: 'hbs'}));
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources/views"));
 
-console.log('path: ', path.join(__dirname, "resources/views"));
+// Static file
+app.use(express.static(path.join(__dirname, 'public')))
+
+// node-sass
+const sass = require('node-sass');
+
 
 app.get("/", (req, res) => {
   res.render('home');
