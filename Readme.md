@@ -33,3 +33,6 @@ app.use(express.static(path.join(\_\_dirname, 'public')))
 <!-- 7. Install node-SASS -->
 
 npm i node-sass --save-dev
+
+<!-- 8. Use Bootstrap -->
+
