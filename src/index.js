@@ -1,34 +1,33 @@
 // Express
-const express = require("express");
+const express = require('express');
 const app = express();
 const port = 3000;
 
 // Morgan
-const morgan = require("morgan");
-app.use(morgan("combined"));
+const morgan = require('morgan');
+app.use(morgan('combined'));
 
 // Template engine - Handlebars
-const engine = require("express-handlebars");
-const path = require("path");
-app.engine("hbs", engine.engine({extname: 'hbs'}));
-app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources/views"));
+const engine = require('express-handlebars');
+const path = require('path');
+app.engine('hbs', engine.engine({ extname: 'hbs' }));
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'resources/views'));
 
 // Static file
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // node-sass
 const sass = require('node-sass');
 
-
-app.get("/", (req, res) => {
-  res.render('home');
+app.get('/', (req, res) => {
+    res.render('home');
 });
 
-app.get("/news", (req, res) => {
-  res.render('news');
+app.get('/news', (req, res) => {
+    res.render('news');
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+    console.log(`Example app listening on port ${port}`);
 });

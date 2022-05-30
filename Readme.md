@@ -36,3 +36,6 @@ npm i node-sass --save-dev
 
 <!-- 8. Use Bootstrap -->
 
+<!-- 9. Code formatter -->
+
+npm install prettier lint-staged husky --save-dev
