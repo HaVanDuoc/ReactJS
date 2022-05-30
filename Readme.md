@@ -39,3 +39,7 @@ npm i node-sass --save-dev
 <!-- 9. Code formatter -->
 
 npm install prettier lint-staged husky --save-dev
+
+<!-- 10. MVC - Routes & Controllers -->
+
+

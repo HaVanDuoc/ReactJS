@@ -20,13 +20,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // node-sass
 const sass = require('node-sass');
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
-
-app.get('/news', (req, res) => {
-    res.render('news');
-});
+// Routes
+const route = require('./routes');
+route(app);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
