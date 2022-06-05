@@ -24,6 +24,10 @@ const sass = require('node-sass');
 const route = require('./routes');
 route(app);
 
+// Connect DB
+const db = require('./config/db');
+db.connect();
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });

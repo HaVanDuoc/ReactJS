@@ -28,7 +28,7 @@ npm install express-handlebars
 
 <!-- 6. Config Static file -->
 
-app.use(express.static(path.join(\_\_dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 <!-- 7. Install node-SASS -->
 
@@ -42,4 +42,10 @@ npm install prettier lint-staged husky --save-dev
 
 <!-- 10. MVC - Routes & Controllers -->
 
+<!-- 11. MVC - Model - Connection DB -->
 
+Install mongoose
+Connect to DB
+Create model
+
+<!-- 11. CRUD - Read from DB -->
